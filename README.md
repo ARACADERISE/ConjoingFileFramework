@@ -1,5 +1,5 @@
 # ConjoingFileFramework
-<hr>
+<br>
 
 ####License: MIT
 
