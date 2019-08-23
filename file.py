@@ -17,11 +17,14 @@
 
 import os
 import sys
+from comm.set_file_port import *
 
+# *NOTE: This is basically overriden at conjoin_path
 path = str(sys.path[0])
 
 # This application will compile for linux
 if sys.platform == 'linux':
+  # Overriding path. adds additional /
   conjoin_path = os.path.join(path, "")
   path_set_up = True
 else:
@@ -29,4 +32,12 @@ else:
 
 # This will be where the application runs
 while path_set_up:
+  have_to_connect = input('Do you have a json file you would like to connect to cff_db.json[y/n] >> ')
+  if have_to_connect == 'y' or have_to_connect == 'Y':
+    get_file = input('\n.json File Name >> ')
+    if not '.json' in get_file:
+      get_file += '.json'
+    get_abs_path = os.path.abspath(get_file)
+    if os.path.exists(conjoin_path+get_file):
+      connect_to(get_abs_path)
   break
