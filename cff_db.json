@@ -1,9 +1,0 @@
-[
-  {
-    "connections_with": "ports",
-    "port_data": null,
-    "ports_type": "18080",
-    "use": "connections",
-    "LICENSE": ["MIT"]
-  }
-]
