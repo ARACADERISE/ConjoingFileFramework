@@ -5,9 +5,5 @@
     "ports_type": "18080",
     "use": "connections",
     "LICENSE": ["MIT"]
-  },
-  {
-    "PORT": true,
-    "status": "202"
   }
 ]
