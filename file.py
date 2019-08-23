@@ -14,3 +14,19 @@
   LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
   IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+
+import os
+import sys
+
+path = str(sys.path[0])
+
+# This application will compile for linux
+if sys.platform == 'linux':
+  conjoin_path = os.path.join(path, "")
+  path_set_up = True
+else:
+  raise Exception('Error: ConjoiningFileFramework cannot function on a device OTHER THAN a linux supported platform platform')
+
+# This will be where the application runs
+while path_set_up:
+  break
