@@ -32,7 +32,7 @@ else:
 
 # This will be where the application runs
 while path_set_up:
-  have_to_connect = input('Do you have a json file you would like to connect to cff_db.json[y/n] >> ')
+  have_to_connect = input('\nDo you have a json file you would like to connect to cff_db.json[y/n] >> ')
   if have_to_connect == 'y' or have_to_connect == 'Y':
     get_file = input('\n.json File Name >> ')
     if not '.json' in get_file:
@@ -40,4 +40,6 @@ while path_set_up:
     get_abs_path = os.path.abspath(get_file)
     if os.path.exists(conjoin_path+get_file):
       connect_to(get_abs_path)
+  else:
+    pass
   break
