@@ -28,7 +28,7 @@ if sys.platform == 'linux':
   conjoin_path = os.path.join(path, "")
   path_set_up = True
 else:
-  raise Exception('Error: ConjoiningFileFramework cannot function on a device OTHER THAN a linux supported platform platform')
+  raise Exception('Error: ConjoiningFileFramework cannot function on a device OTHER THAN a linux supported platform')
 
 # This will be where the application runs
 while path_set_up:
