@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
 import setup_type.setup_type.setup_type;
+
 public class Main {
   public static Scanner getInfo = new Scanner(System.in);
 
