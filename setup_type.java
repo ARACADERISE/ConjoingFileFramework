@@ -55,7 +55,7 @@ public class setup_type {
     do {
       Collections.sort(this.type_data);
       this.max += 1;
-      if(this.max == this.total) {
+      if(this.max < this.total-1) {
         break;
       }
     } while (this.is_ready && this.max < this.total);
