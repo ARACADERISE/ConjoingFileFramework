@@ -56,9 +56,9 @@ public class setup_type {
       Collections.sort(this.type_data);
       this.max += 1;
       // We don't want to use all of this.total
-      if(this.max == this.type_data.size()) {
+      // Since the rest of the list will already be sorted we will save an extra byte since the last one will not need to be sorted
+      if(this.max == this.type_data.size()-1) {
         this.total -= this.max;
-        System.out.println(this.total);
         break;
       }
     } while (this.is_ready && this.max < this.total);
