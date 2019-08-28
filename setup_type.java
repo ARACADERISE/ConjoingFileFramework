@@ -24,6 +24,10 @@ public class setup_type {
   public String final_;
   // This will set the course for using the signal
   public boolean is_ready;
+  // This will be bytes for official setup
+  public int max = 0;
+  // This will be the total amount of bytes for this.max
+  public final int total = 20;
 
   public void getSetupType(String type_) {
     this.TYPE = type_;
@@ -48,9 +52,19 @@ public class setup_type {
       this.is_ready = false;
       System.out.println(this.final_+": User did not choose a correct setup type");
     }
-    while (this.is_ready) {
+    do {
       Collections.sort(this.type_data);
-      break;
-    }
+      this.max += 1;
+      if(this.max == this.total) {
+        break;
+      }
+    } while (this.is_ready && this.max < this.total);
+    //while (this.is_ready && this.max < this.total) {
+    //  Collections.sort(this.type_data);
+    //  this.max += 1;
+    //  if(this.max == this.total) {
+    //    break;
+    //  }
+    //}
   }
 }
