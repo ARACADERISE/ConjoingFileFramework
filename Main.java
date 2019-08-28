@@ -16,6 +16,7 @@ public class Main {
     } else if(get_type.equals("3")) {
       get_type = "reg";
     } else if(!get_type.equals("1") || !get_type.equals("2") || !get_type.equals("3")) {
+      // Nothing should change. I just didn't want this to be empty
       get_type = get_type;
     }
     setup_type set_t = new setup_type();
