@@ -15,6 +15,8 @@ public class Main {
       get_type = "connect";
     } else if(get_type.equals("3")) {
       get_type = "reg";
+    } else if(!get_type.equals("1") || !get_type.equals("2") || !get_type.equals("3")) {
+      get_type = "err";
     }
     setup_type set_t = new setup_type();
     try {
