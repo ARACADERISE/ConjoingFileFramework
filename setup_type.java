@@ -41,8 +41,8 @@ public class setup_type {
         }
         break;
       case "err":
-        this.final_ = "error";
-        this.type_data.add("setup_type_error");
+        this.final_ = "setup_type_error";
+        this.type_data.add(this.final_);
         break;
     }
 
