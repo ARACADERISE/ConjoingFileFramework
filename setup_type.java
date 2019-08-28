@@ -41,7 +41,7 @@ public class setup_type {
         }
         break;
       case "err":
-        this.final_ = this.TYPE+"or";
+        this.final_ = "error";
         this.type_data.add("setup_type_error");
         break;
     }
@@ -50,7 +50,7 @@ public class setup_type {
       this.is_ready = true;
     } else if(!this.final_.equals(this.TYPE)) {
       this.is_ready = false;
-      System.out.println(this.final_+": User did not choose a correct setup type");
+      System.out.println(this.final_+": User did not choose a correct setup type with response of " + this.TYPE);
     }
     do {
       Collections.sort(this.type_data);
@@ -58,6 +58,7 @@ public class setup_type {
       // We don't want to use all of this.total
       if(this.max == this.type_data.size()) {
         this.total -= this.max;
+        System.out.println(this.total);
         break;
       }
     } while (this.is_ready && this.max < this.total);
