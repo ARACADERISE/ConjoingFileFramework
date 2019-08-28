@@ -36,10 +36,16 @@ public class setup_type {
           this.type_data.add(this.final_);
         }
         break;
+      case "err":
+        this.final_ = this.TYPE+"or";
+        break;
     }
 
     if(this.final_.equals(this.TYPE)) {
       this.is_ready = true;
+    } else if(!this.final_.equals(this.TYPE)) {
+      this.is_ready = false;
+      System.out.println(this.final_+": User did not choose a correct setup type");
     }
     while (this.is_ready) {
       Collections.sort(this.type_data);
