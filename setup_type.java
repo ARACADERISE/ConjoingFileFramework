@@ -58,7 +58,6 @@ public class setup_type {
       // We don't want to use all of this.total
       if(this.max == this.type_data.size()) {
         this.total -= this.max;
-        System.out.println(this.total);
         break;
       }
     } while (this.is_ready && this.max < this.total);
