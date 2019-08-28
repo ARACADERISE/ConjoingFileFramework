@@ -38,6 +38,7 @@ public class setup_type {
         break;
       case "err":
         this.final_ = this.TYPE+"or";
+        this.type_data.add("setup_type_error");
         break;
     }
 
