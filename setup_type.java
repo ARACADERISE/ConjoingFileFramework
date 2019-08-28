@@ -27,7 +27,7 @@ public class setup_type {
   // This will be bytes for official setup
   public int max = 0;
   // This will be the total amount of bytes for this.max
-  public final int total = 20;
+  public int total = 9000;
 
   public void getSetupType(String type_) {
     this.TYPE = type_;
@@ -55,7 +55,10 @@ public class setup_type {
     do {
       Collections.sort(this.type_data);
       this.max += 1;
-      if(this.max == this.total-1) {
+      // We don't want to use all of this.total
+      if(this.max == this.type_data.size()) {
+        this.total -= this.max;
+        System.out.println(this.total);
         break;
       }
     } while (this.is_ready && this.max < this.total);
