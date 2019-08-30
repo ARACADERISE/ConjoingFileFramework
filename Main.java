@@ -5,7 +5,7 @@ public class Main {
   public static Scanner getInfo = new Scanner(System.in);
 
   // Getting type
-  public static void TYPE() {
+  public static void RUN() {
     System.out.print("SETUP TYPES:\n1. Port\n2. Connect\n3. Reg\n\nSetup Type: ");
     String get_type = getInfo.nextLine();
     // These should work well being hard coded
@@ -27,6 +27,6 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    TYPE();
+    RUN();
   }
 }
