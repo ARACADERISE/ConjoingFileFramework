@@ -21,13 +21,14 @@ public class gather_type {
       if(this.type_chosen.equals(types[i])) {
         this.type_chosen = "type: "+this.type_chosen;
         add_to_data.add(this.type_chosen);
+        add_to_data.remove(0);
         this.is_ready = true;
         break;
       }
     }
 
     do {
-      this.write_to_file.write_data(this.type_chosen,add_to_data,this.is_ready);
+      this.write_to_file.write_data(add_to_data,add_to_data,this.is_ready);
       break;
     } while(this.is_ready);
   }
