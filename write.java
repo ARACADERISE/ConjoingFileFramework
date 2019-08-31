@@ -19,7 +19,7 @@ public class write {
       try {
         File create_txt_file = new File("//home//runner//info.txt");
         FileWriter write_file = new FileWriter(create_txt_file);
-        write_file.write(this.data_is);
+        write_file.write("DATA: "+this.data_is);
         write_file.close();
         converter.JSON_IT(this.data_is);
       } catch(Exception e) {
