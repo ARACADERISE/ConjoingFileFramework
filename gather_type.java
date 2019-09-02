@@ -3,6 +3,7 @@ package gather_type.gather_type;
 import java.util.Arrays;
 import java.util.ArrayList;
 import write.write.write;
+import use_type.use_type.use_type;
 
 public class gather_type {
   // Global variables that will be used throughout gather_type
@@ -11,6 +12,7 @@ public class gather_type {
   private boolean is_ready = false;
   private int max = 0;
   private write write_to_file = new write();
+  private use_type u_t = new use_type();
 
   public void setTheType(String[] types,String type_is, ArrayList<String> add_to_data) {
     this.type_chosen = type_is;
@@ -29,6 +31,13 @@ public class gather_type {
 
     do {
       this.write_to_file.write_data(add_to_data,add_to_data,this.is_ready);
+      u_t.get_type_to_return(this.type_chosen);
+      try {
+        u_t.use_type_(add_to_data);
+      } catch(Exception e) {
+        System.out.println(e);
+      }
+      u_t.return_all_vals();
       break;
     } while(this.is_ready);
   }
