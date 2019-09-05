@@ -17,21 +17,22 @@ public class setup_type {
     reg
   }
 
-  public ArrayList<String> type_data = new ArrayList<String>();
-  public gather_type type = new gather_type();
+  private ArrayList<String> type_data = new ArrayList<String>();
+  private gather_type type = new gather_type();
+  
 
   // This will be initialized a value for this.final_ to work
-  public String TYPE;
+  private String TYPE;
   // We want to check the value of this.TYPE through this.final_
-  public String final_;
+  private String final_;
   // This will set the course for using the signal
-  public boolean is_ready;
+  private boolean is_ready;
   // This will be bytes for official setup
-  public int max = 0;
+  private int max = 0;
   // This will be the total amount of bytes for this.max
-  public int total = 2;
+  private int total = 2;
   // Setup types for gather_type
-  public static String[] SETUP_TYPES = {"port","connect","reg"};
+  private static String[] SETUP_TYPES = {"port","connect","reg"};
 
   public void getSetupType(String type_) {
     this.TYPE = type_;
