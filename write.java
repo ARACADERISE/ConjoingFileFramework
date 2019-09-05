@@ -9,7 +9,18 @@ import convert_to_json.convert_to_json.convert_to_json;
 public class write {
 
   private String data_is;
+  private String insert_by_data;
   private convert_to_json converter = new convert_to_json();
+
+  public String get_data(String data_info, boolean can_read) {
+    if(can_read) {
+      this.insert_by_data = data_info;
+      System.out.println("Connected To: " + this.insert_by_data);
+      return this.insert_by_data;
+    } else {
+      return "Failed";
+    }
+  }
 
   public void write_data(ArrayList<String> data_to_write, ArrayList<String> add_more, boolean is_ready) {
     for(String d: data_to_write) {
