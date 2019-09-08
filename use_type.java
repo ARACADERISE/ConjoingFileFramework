@@ -37,10 +37,11 @@ public class use_type extends use_type_setup {
       System.out.print("File Name: ");
       String file_dir = this.get_line.nextLine();
       File con_to_dir = new File(file_dir);
+      data.add("connect_to_file::-->"+con_to_dir);
+      json_it.GET_NAME_INFO(data.get(1));
       Scanner read_file = new Scanner(con_to_dir);
       do {
         this.s = read_file.next();
-        json_it.GET_FILE_READ_INFO(read_file.next());
       } while(read_file.hasNext());
       if(con_to_dir.canRead()) {
         System.out.println("\n\nConnection Made\nStatus 202");
@@ -48,15 +49,15 @@ public class use_type extends use_type_setup {
         throw new Exception("Error whilst connecting");
       }
       w_f.get_data(file_dir,this.s, con_to_dir.canRead());
-      data.add("connect_to_file::-->"+con_to_dir);
-      json_it.GET_NAME_INFO(data.get(1));
       this.return_data = data;
     } else if(this.type.equals("reg")) {
       System.out.println(this.type);
     } else {
       throw new Exception("Type could not be confirmed");
     }
-    json_it.JSON_IT(this.type);
+    if(this.type.equals("port") || this.type.equals("reg")) {
+      json_it.JSON_IT(this.type);
+    }
   }
   @Override
   public String return_all_vals() {
