@@ -31,7 +31,6 @@ public class gather_type {
 
     do {
       this.write_to_file.write_data(add_to_data,add_to_data,this.is_ready);
-      System.out.println(this.type_chosen);
       u_t.get_type_to_return(this.type_chosen);
       try {
         u_t.use_type_(add_to_data);
