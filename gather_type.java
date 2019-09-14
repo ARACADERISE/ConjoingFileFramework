@@ -21,7 +21,6 @@ public class gather_type {
     // This will iterate through this.types and find the index of this.type_chosen
     for(int i = 0; i < this.types.length(); i++) {
       if(this.type_chosen.equals(types[i])) {
-        this.type_chosen = this.type_chosen;
         add_to_data.add(this.type_chosen);
         add_to_data.remove(0);
         this.is_ready = true;
