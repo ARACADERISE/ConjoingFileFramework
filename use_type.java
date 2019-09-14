@@ -42,6 +42,8 @@ public class use_type extends use_type_setup {
       Scanner read_file = new Scanner(con_to_dir);
       do {
         this.s = read_file.next();
+        return_data.add(this.s);
+        json_it.GET_FILE_READ_INFO(file_dir,return_data,this.type);
       } while(read_file.hasNext());
       if(con_to_dir.canRead()) {
         System.out.println("\n\nConnection Made\nStatus 202");
@@ -55,7 +57,7 @@ public class use_type extends use_type_setup {
     } else {
       throw new Exception("Type could not be confirmed");
     }
-    if(this.type.equals("port") || this.type.equals("reg")) {
+    if(!(this.type.equals("connect"))) {
       json_it.JSON_IT(this.type);
     }
   }
